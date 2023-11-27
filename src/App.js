@@ -14,15 +14,15 @@ function App() {
             <Search />
             <TodaysWeather />
             <div className="row">
-              <Forecast />
-              <Forecast />
-              <Forecast />
-              <Forecast />
-              <Forecast />
-              <Forecast />
+            <Forecast />
+            <Forecast />
+            <Forecast />
+            <Forecast />
+            <Forecast />
+            <Forecast />
             </div>
             <Footer />
-          </div>
+            </div>
         </div>
       </div>
     </div>
