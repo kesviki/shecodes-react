@@ -11,7 +11,7 @@ body {
 
 .Weather {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 25px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   color: #c5e2ff;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
@@ -30,9 +30,9 @@ body {
   width: 75%;
 }
 .Weather .search-input {
-  background: #fafcff;
+  background: #22313f0c;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   color: rgba(39, 33, 66, 0.4);
   display: inline-block;
   font-size: 16px;
@@ -42,9 +42,9 @@ body {
 }
 
 .Weather .btn {
-  background: #34495e;
+  background: #EC6E4D;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 25px;
   font-size: 16px;
   font-weight: 700;
   height: 50px;
@@ -53,12 +53,12 @@ body {
 
 .Weather .btn:hover {
   background: white;
-  color: #34495e9e;
-  border: 3px solid #34495e9e;
+  color: #EC6E4D;
+  border: 3px solid #EC6E4D;
 }
 
 .Weather .btn:active {
-  background: #34495e !important;
+  background: #EC6E4D !important;
   border: 1px solid white !important;
   color: white !important;
   outline: none !important;
@@ -177,4 +177,8 @@ body {
 
 .unit .active:hover {
   text-decoration: none;
+}
+
+footer a {
+  color: #EC6E4D;
 }
