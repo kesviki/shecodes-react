@@ -31,6 +31,7 @@ export default function TodaysWeather() {
                 height="52"
                 id="currentIcon"
                 src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="Weather Icon"
               />
               <div>
                 <span className="temperature" id="currentTemperature">

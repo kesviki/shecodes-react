@@ -10,6 +10,7 @@ export default function Forecast() {
             src="http://openweathermap.org/img/wn/10d@2x.png"
             width="80"
             height="80"
+            alt="Weather Icon"
           />
           <div className="forecast-temperature">
             <span className="forecast-temperature-max">13</span>
