@@ -12,7 +12,7 @@ function App() {
         <div className="container">
           <div className="Weather">
             <Search />
-            <TodaysWeather />
+            <TodaysWeather defaultCity="Budapest"/>
             <div className="row">
             <Forecast />
             <Forecast />

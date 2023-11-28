@@ -11,12 +11,13 @@ export default function Search() {
             className="form-control search-input"
             id="city-input"
             autocomplete="off"
+            autoFocus="on"
           />
         </div>
         <div className="col-3 p-0">
           <input
             type="submit"
-            className="btn btn-primary w-100"
+            className="btn btn-secondary w-100"
             value="Search"
           />
         </div>
