@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import TodaysDate from "./TodaysDate";
 
 export default function TodaysWeather(props) {
   const [todaysWeatherData, setTodaysWeatherData] = useState({ ready: false });
@@ -11,7 +12,7 @@ export default function TodaysWeather(props) {
       city: response.data.name,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       temperature: response.data.main.temp,
-      date: "Thursday 20:12",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed
@@ -28,7 +29,7 @@ export default function TodaysWeather(props) {
               <h1 id="city">{todaysWeatherData.city}</h1>
               <ul>
                 <li>
-                  <span id="date">{todaysWeatherData.date}</span>,
+                  <span id="date"><TodaysDate date={todaysWeatherData.date}/></span>,
                   <span id="description"> {todaysWeatherData.description}</span>
                 </li>
                 <li>

@@ -10,7 +10,7 @@ export default function Search() {
             placeholder="Enter a city"
             className="form-control search-input"
             id="city-input"
-            autocomplete="off"
+            autoComplete="off"
             autoFocus="on"
           />
         </div>
