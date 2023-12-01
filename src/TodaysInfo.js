@@ -1,6 +1,7 @@
 import React from "react";
 import TodaysDate from "./TodaysDate";
 import WeatherIcon from "./WeatherIcon";
+import TemperatureInfo from "./TemperatureInfo";
 
 export default function TodaysInfo(props) {
     return (
@@ -28,12 +29,7 @@ export default function TodaysInfo(props) {
             <div className="col-6">
               <div className="temperature-container d-flex justify-content-end">
                 <WeatherIcon code={props.data.icon} />
-                <div>
-                  <span className="temperature" id="currentTemperature">
-                    {Math.round(props.data.temperature)}
-                  </span>
-                  <span className="unit">°C </span>
-                </div>
+                 <TemperatureInfo celsius={props.data.temperature} />
               </div>
             </div>
           </div>
