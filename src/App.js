@@ -1,9 +1,7 @@
-import './App.css';
-
-import Search from "./Search";
 import TodaysWeather from "./TodaysWeather";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
+import './App.css';
 
 function App() {
   return (
@@ -11,7 +9,6 @@ function App() {
       <div className="App">
         <div className="container">
           <div className="Weather">
-            <Search />
             <TodaysWeather defaultCity="Budapest"/>
             <div className="row">
             <Forecast />
