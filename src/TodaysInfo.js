@@ -1,5 +1,6 @@
 import React from "react";
 import TodaysDate from "./TodaysDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function TodaysInfo(props) {
     return (
@@ -26,13 +27,7 @@ export default function TodaysInfo(props) {
             </div>
             <div className="col-6">
               <div className="temperature-container d-flex justify-content-end">
-                <img
-                  width="52"
-                  height="52"
-                  id="currentIcon"
-                  src={props.data.iconUrl}
-                  alt={props.data.description}
-                />
+                <WeatherIcon code={props.data.icon} />
                 <div>
                   <span className="temperature" id="currentTemperature">
                     {Math.round(props.data.temperature)}
