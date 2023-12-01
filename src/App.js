@@ -11,12 +11,7 @@ function App() {
           <div className="Weather">
             <TodaysWeather defaultCity="Budapest"/>
             <div className="row">
-            <Forecast />
-            <Forecast />
-            <Forecast />
-            <Forecast />
-            <Forecast />
-            <Forecast />
+
             </div>
             <Footer />
             </div>
