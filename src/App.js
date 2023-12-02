@@ -1,4 +1,4 @@
-import TodaysWeather from "./TodaysWeather";
+import Weather from "./Weather";
 import Footer from "./Footer";
 import './App.css';
 
@@ -8,10 +8,7 @@ function App() {
       <div className="App">
         <div className="container">
           <div className="Weather">
-            <TodaysWeather defaultCity="Budapest"/>
-            <div className="row">
-
-            </div>
+            <Weather defaultCity="Budapest"/>
             <Footer />
             </div>
         </div>

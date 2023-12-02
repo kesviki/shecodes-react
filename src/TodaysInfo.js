@@ -28,7 +28,7 @@ export default function TodaysInfo(props) {
             </div>
             <div className="col-6">
               <div className="temperature-container d-flex justify-content-end">
-                <WeatherIcon code={props.data.icon} />
+                <WeatherIcon code={props.data.icon} size={60}/>
                  <TemperatureInfo celsius={props.data.temperature} />
               </div>
             </div>

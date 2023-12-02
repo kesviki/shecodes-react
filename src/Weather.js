@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
 import TodaysInfo from "./TodaysInfo";
+import Forecast from "./Forecast";
 
-export default function TodaysWeather(props) {
-  const [todaysWeatherData, setTodaysWeatherData] = useState({ ready: false });
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    setTodaysWeatherData({ 
+    console.log(response)
+    setWeatherData({ 
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       icon: response.data.weather[0].icon,
       temperature: response.data.main.temp,
@@ -35,7 +38,7 @@ export default function TodaysWeather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  if (todaysWeatherData.ready) {
+  if (weatherData.ready) {
     return (
             <div>
               <form id="search-form" onSubmit={handleSubmit}>
@@ -60,8 +63,11 @@ export default function TodaysWeather(props) {
         </div>
       </div>
     </form>
-     <TodaysInfo data={todaysWeatherData}/>
+     <TodaysInfo data={weatherData}/>
+     <div className="row">
+             <Forecast coordinates={weatherData.coordinates}/>
       </div>
+    </div>
     );
   } else {
     search();
