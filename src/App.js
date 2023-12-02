@@ -1,5 +1,4 @@
 import TodaysWeather from "./TodaysWeather";
-import Forecast from "./Forecast";
 import Footer from "./Footer";
 import './App.css';
 
