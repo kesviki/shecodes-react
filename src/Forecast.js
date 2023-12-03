@@ -17,8 +17,20 @@ export default function Forecast(props) {
   
   if (loaded) { return ( <div className="row">
           {forecast.map(function(dailyForecast, index) {
+            let columnClasses = "col";
+
+            if (index < 3) {
+              columnClasses = "col";
+            } 
+            else if (index < 5) {
+              columnClasses = "col d-none d-md-block";
+            }
+            else if (index < 8) {
+              columnClasses = "col d-none d-sm-block";
+            }
+
             return (
-              <div className="col" key={index}>
+              <div className={columnClasses} key={index}>
             <ForecastDay data={dailyForecast} />   
             </div>
             ) 
