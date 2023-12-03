@@ -12,14 +12,15 @@ export default function Forecast(props) {
   }
 
   
-  if (loaded) { return ( 
-    <div className="col-2">
-<div className="WeatherForecast row" id="forecast">
-        <div className="WeatherForecastPreview">
-         <ForecastDay data={forecast[0]} />    
-      </div>
-    </div>
-    </div>
+  if (loaded) { return ( <div className="row">
+          {forecast.map(function(dailyForecast, index) {
+            return (
+              <div className="col" key={index}>
+            <ForecastDay data={dailyForecast} />   
+            </div>
+            )
+          } )}
+</div>
     )
   } else {
   let apiKey = "616b14cbd38253313b3b8852fa77335d"
