@@ -23,10 +23,13 @@ export default function Forecast(props) {
               columnClasses = "col";
             } 
             else if (index < 5) {
+              columnClasses = "col d-none d-sm-block";
+            }
+            else if (index < 7) {
               columnClasses = "col d-none d-md-block";
             }
-            else if (index < 8) {
-              columnClasses = "col d-none d-sm-block";
+            else {
+              return null;
             }
 
             return (
